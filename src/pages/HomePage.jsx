@@ -5,6 +5,7 @@ import SkillsSection from '../components/skills/SkillsSection';
 import ScopeEstimator from '../components/estimator/ScopeEstimator';
 import ContactSection from '../components/contact/ContactSection';
 import Footer from '../components/layout/Footer';
+import ProjectsSection from '../components/projects/ProjectsSection';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <SkillsSection />
+        <ProjectsSection />
         <ScopeEstimator />
         <ContactSection />
       </main>
