@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, Download } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,8 @@ export default function Navbar() {
           <span className="text-white font-mono">Dev.Portfolio</span>
         </a>
 
-        <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -30,6 +31,17 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+
+          {/* Download Resume Button */}
+          <a
+            href="/resume.pdf"
+            download="Isuru Pramuditha Jaysooriya_Resume.pdf"
+            className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition font-semibold shadow-md shadow-cyan-500/10 active:scale-95"
+          >
+            <Download className="w-4 h-4" />
+            <span>Resume</span>
+          </a>
+
           <a
             href="#contact"
             className="px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition font-semibold"
@@ -38,6 +50,7 @@ export default function Navbar() {
           </a>
         </div>
 
+        {/* Mobile Hamburger Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-400 hover:text-white focus:outline-none"
@@ -47,6 +60,7 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden mt-3 pt-3 border-t border-slate-800 space-y-3 pb-2 px-2">
           {navLinks.map((link) => (
@@ -59,10 +73,22 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+
+          {/* Mobile Download Resume Button */}
+          <a
+            href="/resume.pdf"
+            download="Isuru Pramuditha Jaysooriya_Resume.pdf"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-center space-x-2 w-full py-2.5 rounded-lg bg-cyan-500 text-slate-950 font-semibold"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Resume</span>
+          </a>
+
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="block text-center mt-2 py-2 rounded-lg bg-cyan-500 text-slate-950 font-semibold"
+            className="block text-center mt-2 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-semibold"
           >
             Hire Me
           </a>
