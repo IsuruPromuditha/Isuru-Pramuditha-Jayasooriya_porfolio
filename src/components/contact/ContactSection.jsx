@@ -37,7 +37,7 @@ export default function ContactSection() {
                 <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span>yourname@email.com</span>
+                <span>isurupromuditha617@email.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <div className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
@@ -51,7 +51,7 @@ export default function ContactSection() {
               <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Connect</h4>
               <div className="flex space-x-3">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/IsuruPromuditha"
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition"
@@ -60,7 +60,7 @@ export default function ContactSection() {
                   <FaGithub className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/isuru-jayasooriya-891a50217"
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 rounded-lg bg-slate-900 border border-slate-800 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition"
