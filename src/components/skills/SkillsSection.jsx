@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import {
   SiReact,
   SiTailwindcss,
@@ -32,6 +32,7 @@ const CATEGORY_TABS = [
 
 export default function SkillsSection() {
   const [activeTab, setActiveTab] = useState('All');
+  const [selectedSkill, setSelectedSkill] = useState(null);
 
   const filteredSkills = useMemo(() => {
     if (activeTab === 'All') return SKILLS_DATA;
@@ -72,17 +73,25 @@ export default function SkillsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredSkills.map((skill) => {
             const IconComponent = skill.icon;
+            const isSelected = selectedSkill === skill.name;
             return (
-              <div
+              <button
                 key={skill.name}
-                className="group p-5 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-cyan-500/50 hover:bg-slate-800/80 transition duration-300"
+                type="button"
+                aria-pressed={isSelected}
+                onClick={() => setSelectedSkill(isSelected ? null : skill.name)}
+                className={`group w-full rounded-xl border p-4 text-left backdrop-blur-sm transition duration-300 sm:p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ${
+                  isSelected
+                    ? 'border-cyan-400/70 bg-cyan-500/15 shadow-lg shadow-cyan-950/30'
+                    : 'border-slate-700/50 bg-slate-800/35 hover:border-cyan-500/50 hover:bg-slate-800/60'
+                }`}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-700/60 group-hover:border-slate-600 transition">
-                      <IconComponent className={`w-6 h-6 ${skill.color}`} />
+                  <div className="flex min-w-0 items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-700/60 bg-slate-900/55 transition group-hover:border-slate-600 sm:h-12 sm:w-12">
+                      <IconComponent className={`h-5 w-5 sm:h-6 sm:w-6 ${skill.color}`} />
                     </div>
-                    <span className="font-semibold text-white group-hover:text-cyan-400 transition">
+                    <span className="font-semibold text-white transition group-hover:text-cyan-400">
                       {skill.name}
                     </span>
                   </div>
@@ -97,7 +106,7 @@ export default function SkillsSection() {
                     style={{ width: `${skill.level}%` }}
                   />
                 </div>
-              </div>
+              </button>
             );
           })}
         </div>
