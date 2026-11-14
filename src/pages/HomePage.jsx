@@ -13,8 +13,8 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <SkillsSection />
         <ProjectsSection />
+        <SkillsSection />
         <ScopeEstimator />
         <ContactSection />
       </main>
