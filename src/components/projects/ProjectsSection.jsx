@@ -4,7 +4,6 @@ import { FaGithub } from 'react-icons/fa';
 
 const PROJECTS = [
   {
-<<<<<<< HEAD
     id: 'aura-id',
     name: 'AuraID',
     description:
@@ -32,8 +31,6 @@ const PROJECTS = [
     image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&q=80',
   },
   {
-=======
->>>>>>> e620e5f5ffb8934f35edeb4f4d7588587914b173
     id: 'time-ticker',
     name: 'TimeTicker',
     description:
@@ -92,11 +89,7 @@ const PROJECTS = [
 export default function ProjectsSection() {
   const [filter, setFilter] = useState('All');
 
-<<<<<<< HEAD
   const categories = ['All', 'AI', 'React', 'Node.js', 'PHP'];
-=======
-  const categories = ['All', 'React', 'Node.js', 'PHP'];
->>>>>>> e620e5f5ffb8934f35edeb4f4d7588587914b173
 
   const filteredProjects =
     filter === 'All'
@@ -112,20 +105,12 @@ export default function ProjectsSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Featured Engineering Projects</h2>
           <p className="text-gray-400 max-w-xl mx-auto mt-2">
-<<<<<<< HEAD
             Explore AI-powered applications, full-stack web platforms, REST APIs, and standalone software systems built across modern tech stacks.
-=======
-            Explore full-stack web applications, REST APIs, and standalone software systems built across modern tech stacks.
->>>>>>> e620e5f5ffb8934f35edeb4f4d7588587914b173
           </p>
         </div>
 
         {/* Filter Tabs */}
-<<<<<<< HEAD
         <div className="flex flex-wrap justify-center gap-2 mb-10">
-=======
-        <div className="flex justify-center space-x-2 mb-10">
->>>>>>> e620e5f5ffb8934f35edeb4f4d7588587914b173
           {categories.map((cat) => (
             <button
               key={cat}
