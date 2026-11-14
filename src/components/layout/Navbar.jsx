@@ -34,7 +34,11 @@ export default function Navbar() {
 
           {/* Download Resume Button */}
           <a
+<<<<<<< HEAD
             href="/resume.pdf"
+=======
+            href="/Isuru Pramuditha Jaysooriya_Resume.pdf"
+>>>>>>> e620e5f5ffb8934f35edeb4f4d7588587914b173
             download="Isuru Pramuditha Jaysooriya_Resume.pdf"
             className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition font-semibold shadow-md shadow-cyan-500/10 active:scale-95"
           >
