@@ -4,6 +4,33 @@ import { FaGithub } from 'react-icons/fa';
 
 const PROJECTS = [
   {
+    id: 'aura-id',
+    name: 'AuraID',
+    description:
+      'A Shazam-inspired TypeScript audio identification and ownership verification engine. Records audio samples, identifies tracks via acoustic matching, and displays real-world rights holder details with direct links.',
+    stack: ['AI', 'TypeScript', 'Audio Recognition', 'Acoustic Matching'],
+    github: 'https://github.com/IsuruPromuditha/AuraID',
+    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'ai-photo-editor',
+    name: 'AI Photo Editor & Background Remover',
+    description:
+      'A full-stack AI-powered photo editing and background removal web app. Features instant client-side edge segmentation, magic wand selection, Gemini AI background removal, custom studio backdrops, and high-res export.',
+    stack: ['AI', 'React', 'TypeScript', 'Express', 'Gemini AI'],
+    github: 'https://github.com/IsuruPromuditha/AI-Based-Photo-Editing-Website-Background-Remover-',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 'remix-text-to-voice',
+    name: 'Remix Text-to-Voice Studio',
+    description:
+      'A generative voice AI and text-to-speech application featuring real-time WebSocket streaming, interactive audio visualizers, moodboard styling, and Gemini-powered voice synthesis.',
+    stack: ['AI', 'React', 'TypeScript', 'Tailwind CSS', 'Gemini API', 'WebSockets'],
+    github: 'https://github.com/IsuruPromuditha/remix-text-to-voice_',
+    image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&q=80',
+  },
+  {
     id: 'time-ticker',
     name: 'TimeTicker',
     description:
@@ -62,7 +89,7 @@ const PROJECTS = [
 export default function ProjectsSection() {
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'React', 'Node.js', 'PHP'];
+  const categories = ['All', 'AI', 'React', 'Node.js', 'PHP'];
 
   const filteredProjects =
     filter === 'All'
@@ -78,12 +105,12 @@ export default function ProjectsSection() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Featured Engineering Projects</h2>
           <p className="text-gray-400 max-w-xl mx-auto mt-2">
-            Explore full-stack web applications, REST APIs, and standalone software systems built across modern tech stacks.
+            Explore AI-powered applications, full-stack web platforms, REST APIs, and standalone software systems built across modern tech stacks.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center space-x-2 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((cat) => (
             <button
               key={cat}
